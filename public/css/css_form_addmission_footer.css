@@ -1,0 +1,61 @@
+footer {
+    background-color: #09151f;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.tbody{
+  width: 100%;
+}
+.personal_details{
+  display: flex;
+  background-color:#efe1e100;
+  color:#EFE1E1;
+  font-size: 24px;
+  justify-content: center;
+  padding: 10px;
+    }
+.more_details{
+  text-align: center;
+  display: flex;
+  background-color:#EFE1E100;
+  color: #EFE1E1;
+  font-size: 18px;
+  justify-content: center;
+  padding: 10px;
+  line-height: 1.6;
+}
+.Personal{
+  width: 40%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.contact_details{
+  width: 100%;
+}
+@media screen and (max-width:830px) {
+    .Personal >*{
+      display: block;
+    }
+    .Personal{
+      display: table-cell;
+      vertical-align: top;
+    }
+    .personal_details{
+        justify-content: left;
+        align-items: center;
+        height: 80px;
+    }
+    .more_details{
+        justify-content: unset;
+        align-items: center;
+        height: 80px;
+        text-align: left;
+    }
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}

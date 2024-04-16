@@ -1,0 +1,137 @@
+header {
+    background-image: linear-gradient(to left, #ba3545, #4e1a28);
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+.image {
+    align-items: center;
+    margin-left: 12px;
+}
+h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+main { 
+    text-align: center;
+    
+}
+nav {
+    align-items: center;
+}
+
+footer {
+    background-color: #09151f;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00000000;
+    overflow: hidden;
+    
+}
+
+/* Style the links inside the navigation bar */
+.topnav-right a {
+    vertical-align: middle;
+    color: #EFE1E1;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Change the color of links on hover */
+.topnav-right a:hover {
+    color: #15181f;
+}
+
+.link {
+    display: flex;
+}
+
+.menu-button{
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 35px;
+    width: 35px;
+}
+.name{
+    margin-left: 1px;
+}
+.profile-icon{
+    margin: 9px;
+}
+.text {
+    margin-bottom: 3px;
+    margin-left: 10px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px auto;
+    background-color: #EFE1E1;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.ring, .dot{  
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    text-align: center;    
+}
+.ring{
+    border-color: #00000000;
+}
+.dot{
+    background-color: #09151f;
+    justify-content: center;
+}
+@media (max-width: 680px) {
+    .menu-toggle {
+        display: block; /* Show the button on smaller screens */
+    }
+    .nav-list {
+        display: none;
+    }
+    .nav-list a{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .nav-list.active {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ring {
+        margin:auto;
+        border: 3px solid transparent;
+        border-color: #EFE1E1; /* Replace with your desired color */
+        border-radius: 100%; /* Create a circular shape */
+        /* transition: border 0.3s ease-in-out; */
+    }
+}

@@ -1,0 +1,146 @@
+{{!-- <h3>{{viewTitle}}</h3> --}}
+ <title>Admission Form</title>
+ <div class="header-container"></div>
+<p style="font-family:Arial,Helvetica, sans-serif"></p>
+    <h1 align="center">Admission Form </h1>
+<form action="/student" method="POST" autocomplete="on">
+<table align="center"></table>
+  <input type="hidden" name="_id" value="{{student._id}}">
+  <div class="form-group">
+    <label>
+            <tr>
+                 <table align="center" cellpaddling="20" cellmargin="20 pt" cellspacing="20">
+                <td><b>Name:</b></td>
+                <td colspan="3"><input id="Name" type="text" placeholder="Enter Name" name="Name" value="{{student.Name}}" class="text">
+                </td>
+            </tr>
+            <tr>
+                <td><b>Date of Birth:</b></td>
+                <td colspan="3"><input Class="date" type="date" id="Date_of_birth" name="Date_of_birth" value="{{student.Date_of_birth}}"></td>
+            </tr>
+            <tr>
+                <td><b>Gender:</b></td>
+               <td><b><input type="radio" name="Gender" value="{{student.Gender}}Male">Male</td></b>
+                  <td><b><input type="radio" name="Gender" value="{{student.Gender}}Female">Female</td> </b>
+                   <td><b><input type="radio" name="Gender" value="{{student.Gender}}Other">Other</td></b>
+            </tr>
+            <tr>
+                <td><b>Address:</b></td>
+                <td colspan="3"><input name="Address" id="Address" type="text" placeholder="Present Address" class="text" value="{{student.Address}}"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="3"><input name="Address1" id="Address1" type="text" placeholder="Present Address" class="text" value="{{student.Address1}}"></td>
+            </tr>
+            <tr>
+                <td><b>Email id:</b></td>
+                <td colspan="3" ><input name="Email_id" id="Email_id" type="text" placeholder="Email id" class="text" value="{{student.Email_id}}"></td>
+            </tr>
+            <tr>
+                <td><b>Phone No.:</b></td>
+                <td  colspan="3"><input name="Phone_No" id="Phone_No." type="text" placeholder="Phone No." class="text" value="{{student.Phone_No}}"></td>
+            </tr>
+            <tr>
+                <td><b>Alternate Phone No.:</b></td>
+                <td  colspan="3"><input name="Alternate_Phone_No" id="Alternate_Phone_No." type="text" placeholder="Alternate Phone No."class="text" value="{{student.Alternate_Phone_No}}"></td>
+            </tr>
+            <tr>
+                <td><b>Subject Choosen:</b></td>
+                <td><input name="Subject_Choosen0" id="Subject" type="text" placeholder="Subject Choosen" class="sub" value="{{student.Subject_Choosen.[0]}}"></td>
+                <td><input name="Subject_Choosen1" id="Subject1" type="text" placeholder="Subject Choosen" class="sub" value="{{student.Subject_Choosen.[1]}}"></td>
+                <td><input name="Subject_Choosen2" id="Subject2" type="text" placeholder="Subject Choosen" class="sub" value="{{student.Subject_Choosen.[2]}}"></td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td><input name="Subject_Choosen3" id="Subject3" type="text" placeholder="Subject Choosen" class="sub" value="{{student.Subject_Choosen.[3]}}"></td>
+                <td><input name="Subject_Choosen4" id="Subject4" type="text" placeholder="Subject Choosen" class="sub" value="{{student.Subject_Choosen.[4]}}"></td>
+                <td><input name="Subject_Choosen5" id="Subject5" type="text" placeholder="Subject Choosen" class="sub" value="{{student.Subject_Choosen.[5]}}"></td>
+            </tr>
+            <tr>
+                <td><b>Class:</b></td>
+                <td colspan="3"> <div class="Class"style="width:100%">
+                    <select  id="Select1" name = "Class" onclick="classes(this.value)" value="{{student.Class}}">
+                        <option value="" disabled selected style="display: none;">Select class</option>
+                        <option value="6">6th</option>
+                        <option value="7">7th</option>
+                        <option value="8">8th</option>
+                        <option value="9">9th</option>
+                        <option value="10">10th</option>
+                        <option value="11">11th</option>
+                        <option value="12">12th</option>
+                        <option value="13"><a href="#ud"> Undergraduate </a></option>
+                    </select>
+                  </div> </td>
+            </tr>
+            <tr class="Semester" id="Select2" value="{{student.Semester}}">
+                <td><b>Semester:</b></td>
+                <td colspan="3"><select id="Semester" name = Semester>
+                    <option value="" disabled selected style="display: none;">Select Semester</option>
+                    <option value="1">1st Semester</option>
+                    <option value="2">2nd Semester</option>
+                    <option value="3">3rd Semester</option>
+                    <option value="4">4th Semester</option>
+                    <option value="5">5th Semester</option>
+                    <option value="6">6th Semester</option>
+                    <option value="7">7th Semester</option>
+                    <option value="8">8th Semester</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><b>School Name/College Name:</b></td>
+                <td  colspan="3"><input id="SchoolName_CollegeName" name="SchoolName_CollegeName" type="text" placeholder="School Name/College Name" class="text" value="{{student.SchoolName_CollegeName}}"></td>
+            </tr>
+            <tr>
+                <td><b>Father's Name:</b></td>
+                <td  colspan="3"><input type="text"id="Fathers_Name"name="Fathers_Name" placeholder="Enter Father's Name" class="text" value="{{student.Fathers_Name}}"></td>
+            </tr>
+            <tr>
+                <td><b>Mother's Name:</b></td>
+                <td  colspan="3"><input type="text" id="Mothers_Name"name="Mothers_Name" placeholder="Enter Mother's Name" class="text" value="{{student.Mothers_Name}}"></td>
+            </tr>
+            <tr>
+                <td><b>Father's Ocupation:</b></td>
+                <td  colspan="3"><input type="text" id="Fathers_Occupation" name="Fathers_Occupation" placeholder="Father's Ocupation" class="text" value="{{ student.Fathers_Occupation}}"></td>
+            </tr>
+            <tr>
+                <td><b>Mother's  Ocupation:</b></td>
+                <td colspan="3"><input type="text" id="Mothers_Occupation" name="Mothers_Occupation" placeholder="Mother's  Ocupation" class="text" value="{{student.Mothers_Occupation}}"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="4"><b>Decleration</b></td>
+                </tr>
+                <tr>
+                <td colspan="4"><p>I hereby, declaring that I will obey all the rules and regulations of the institution and be fully responsible for violating the rules.</p></td>
+            </tr>
+            <label  class="drop-container" id="dropcontainer">
+                <span class="drop-title">Student's photo<br></span>
+                or<br>
+                <div class="container">
+                      <label class="button" for="upload_profile">Upload File</label>
+                      <input id="upload_profile" style="display: none;" type="file">
+                  </div>
+            <tr>
+                    <td><b>Student's Signature:<br></b></td>
+                <td><div class="upload"></div>
+                    <label class="button" for="upload_student_sign">Upload File</label>
+                     <input id="upload_student_sign" style="display: none;" type="file">
+                   
+                    </div>
+                </td>
+                <td><b>Parent's Signature:<br></b></td>
+                <td><div class="upload"></div>
+                    <label class="upload-button" for="upload_parent_sign">Upload File</label>
+                    <input id="upload_parent_sign" style="display: none;" type="file">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="Submit" class="Submit" name="Submit"></td>
+                <td><input type="Reset" class="Reset" name="Reset"></td>
+            </tr> 
+            </table>
+        </label>
+    </div>
+</form>
